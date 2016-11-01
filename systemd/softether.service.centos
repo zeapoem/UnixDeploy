@@ -1,0 +1,14 @@
+[Unit]
+Description=Start Softether VPN Server
+Wants=network-online.target
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/home/klimmy/vpnserver/vpnserver start
+ExecStop=/home/klimmy/vpnserver/vpnserver stop
+
+[Install]
+WantedBy=multi-user.target
+Alias=vpnserver

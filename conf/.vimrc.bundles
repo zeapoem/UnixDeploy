@@ -1,0 +1,126 @@
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+if has('win32')
+	set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+	call vundle#begin('$HOME/vimfiles/bundle/')
+else
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+endif
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Vim Outliner of Markups
+Plugin 'VOoM'
+
+" Phd theme
+Plugin 'vim-scripts/phd'
+
+" CtrlP, Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+Plugin 'Konfekt/FastFold'
+" Auto-Complete Plugin: Neocomplete
+Plugin 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
+
+" YCM
+" Plugin 'Valloric/YouCompleteMe'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py' 
+"Plugin 'rdnetto/YCM-Generator'
+
+" SuperTab
+Plugin 'SuperTab'
+
+" Rainbow
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" Taglist
+" Plugin 'taglist.vim'
+
+" NerdTree
+if has('mac')
+" Plugin 'scrooloose/nerdtree'
+" autocmd vimenter * NERDTree
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" map <C-n> :NERDTreeToggle<CR>
+" let g:NERDTreeDirArrows = 1
+" let g:NERDTreeDirArrowExpandable = '+'
+" let g:NERDTreeDirArrowCollapsible = '-'
+endif
+
+" vim-markdown
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_math=1
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme = "molokai"
+
+" VisIncr from vim-scripts.org
+Plugin 'VisIncr'
+
+
+Plugin 'vim-latex/vim-latex'
+set grepprg=grep\ -nH\ $*
+let g:tex_indent_items=0
+let g:tex_flavor = "latex"
+
+Plugin 'junegunn/vim-easy-align'
+vmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+if !exists('g:easy_align_delimiters')
+  let g:easy_align_delimiters = {}
+endif
+let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsUsePythonVersion = 2
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsSnippetsDir='~/.vim/bundle/vim-snippets/UltiSnips'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+ let g:UltiSnipsEditSplit="vertical"
+
+Plugin 'scrooloose/syntastic'
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+filetype plugin on
+filetype indent on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
