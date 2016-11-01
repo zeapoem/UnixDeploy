@@ -7,7 +7,7 @@ Config Files for:
 - Anaconda ( `conf/.condarc` )
 - gem ( `conf/.gemrc` )
 - git ( `conf/.gitconfig` & `.gitignore` )
-- latexmk ( `conf.osx/.latexmk` & `conf.linux/.latexmk`)
+- latexmk ( `conf.osx/.latexmkrc` & `conf.linux/.latexmkrc`)
 - npm ( `conf/.npmrc` )
 - systemd ( `systemd/*` )
 - tmux ( `conf/.tmux.conf` )
@@ -18,11 +18,11 @@ Config Files for:
 
 ## Requirements
 
-#### For macOS 10.12+
+### For macOS 10.12+
 
 - `antigen.zsh` in `$(brew --prefix)/share/antigen/`
 
-#### For Linux(Ubuntu, Fedora or CentOS)
+### For Linux(Ubuntu, Fedora or CentOS)
 
 - `antigen.zsh` in `/usr/share/zsh-antigen/`
 
@@ -38,12 +38,11 @@ To change shell to zsh:
 chsh -s $(which zsh)
 ```
 
-### What will happen when setup.sh is executed:
+### What will happen when `./setup.sh` is executed:
 
 - Create soft link for `.*rc` files to `$HOME`
 - Install Vundle.vim from github if not installed
 - Install colors for vim
-
-
+- **Waring:** config files in this repository will overwrite your own.
 
 [vundle]:https://github.com/VundleVim/Vundle.vim
