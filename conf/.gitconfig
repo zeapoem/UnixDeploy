@@ -1,6 +1,6 @@
 [user]
 	name = essethon
-	email = essethon@outlook.com
+	email = xcalcor@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
