@@ -1,5 +1,5 @@
-# etConfig
-Configuration files
+# UnixDeploy
+Config files for unix-like environments
 
 ## Contents
 Config Files for:
@@ -28,8 +28,8 @@ Config Files for:
 
 ## Deploy
 ```sh
-git clone https://github.com/essethon/myconfig.git ~
-cd ~/myconfig
+git clone https://github.com/essethon/unixdeploy.git ~
+cd ~/unixdeploy
 ./setup.sh
 ```
 
