@@ -1,5 +1,5 @@
 # UnixDeploy
-Config files for unix-like environments
+Config files for UNIX-like environments
 
 ## Contents
 Config Files for:
@@ -18,11 +18,15 @@ Config Files for:
 
 ## Requirements
 
+- git
+- zsh
+- [thefuck][thefuck] (recommanded)
+
 ### For macOS 10.12+
 
 - `antigen.zsh` in `$(brew --prefix)/share/antigen/`
 
-### For Linux(Ubuntu, Fedora or CentOS)
+### For Linux (Ubuntu, Fedora or CentOS)
 
 - `antigen.zsh` in `/usr/share/zsh-antigen/`
 
@@ -46,3 +50,4 @@ chsh -s $(which zsh)
 - **Waring:** config files in this repository will overwrite your own.
 
 [vundle]:https://github.com/VundleVim/Vundle.vim
+[thefuck]:https://github.com/nvbn/thefuck

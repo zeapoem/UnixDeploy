@@ -5,6 +5,13 @@ export UNAME=$(uname)
 export LANG=en_US.UTF-8
 if [[ $UNAME = Linux ]]; then
 	export LC_ALL=en_US.UTF-8
+    
+    # Thefuck
+    which fuck > /dev/null
+    if [ $? -eq 0 ]; then
+        eval "$(thefuck --alias)"
+    fi
+
 elif [[ $UNAME = Darwin ]]; then
 	#eval $(thefuck --alias)
 	export LC_ALL=$LANG
