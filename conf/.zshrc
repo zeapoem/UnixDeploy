@@ -13,7 +13,13 @@ if [[ $UNAME = Linux ]]; then
     fi
 
 elif [[ $UNAME = Darwin ]]; then
-	#eval $(thefuck --alias)
+
+    #Thefuck
+    which fuck > /dev/null
+    if [ $? -eq 0 ]; then
+        eval "$(thefuck --alias)"
+    fi
+
 	export LC_ALL=$LANG
     # Load pyenv
     eval "$(pyenv init -)"
