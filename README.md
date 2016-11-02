@@ -20,7 +20,7 @@ Config Files for:
 
 - git
 - zsh
-- [thefuck][thefuck] (recommanded)
+- [thefuck][thefuck] (recommended)
 
 ### For macOS 10.12+
 
@@ -42,7 +42,7 @@ To change shell to zsh:
 chsh -s $(which zsh)
 ```
 
-### What will happen when `./setup.sh` is executed:
+### What will happen if `./setup.sh` is executed:
 
 - Create soft link for `.*rc` files to `$HOME`
 - Install Vundle.vim from github if not installed
